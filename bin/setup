@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+
+PROJECT_ROOT = File.expand_path('..', __dir__)
+DATA_DIR     = File.expand_path('data', PROJECT_ROOT)
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+FileUtils.chdir DATA_DIR do
+  puts '== Downloading data =='
+  system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/hightemp.txt -O'
+end
