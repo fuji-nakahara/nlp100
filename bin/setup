@@ -11,4 +11,5 @@ end
 FileUtils.chdir DATA_DIR do
   puts '== Downloading data =='
   system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/hightemp.txt -O'
+  system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/jawiki-country.json.gz -O'
 end
