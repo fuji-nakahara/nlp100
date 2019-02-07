@@ -17,4 +17,8 @@ FileUtils.chdir DATA_DIR do
   puts "\n== Analyzing neko.txt by MeCab =="
   system! 'mecab --version'
   system! 'mecab neko.txt -o neko.txt.mecab'
+
+  puts "\n== Analyzing neko.txt by CaboCha =="
+  system! 'cabocha --version'
+  system! 'cabocha -f1 neko.txt -o neko.txt.cabocha'
 end
