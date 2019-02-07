@@ -7,12 +7,12 @@ file_path = File.expand_path('../data/neko.txt.mecab', __dir__)
 res = []
 File.open(file_path) do |file|
   morphs = []
-  file.each do |line|
-    if line == "EOS\n"
+  file.each_line(chomp: true) do |line|
+    if line == 'EOS'
       res << morphs
       morphs = []
     else
-      arr = line.chomp.split(/[\t,]/)
+      arr = line.split(/[\t,]/)
       morphs << { surface: arr[0], base: arr[7], pos: arr[1], pos1: arr[2] }
     end
   end
