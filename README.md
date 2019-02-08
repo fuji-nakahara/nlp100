@@ -11,3 +11,12 @@
 macOS であれば Homebrew を使ってこれらをインストールできます:
 
     $ brew install mecab mecab-ipadic gnuplot cabocha
+
+## Usage
+
+```
+$ git clone https://github.com/fuji-nakahara/nlp100.git
+$ cd nlp100
+$ bin/setup
+$ bundle exec rake
+```
