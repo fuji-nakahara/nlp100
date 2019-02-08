@@ -8,8 +8,14 @@ def system!(*args)
   system(*args) || abort("\n== Command #{args} failed ==")
 end
 
+FileUtils.chdir PROJECT_ROOT do
+  puts '== Installing dependencies =='
+  system! 'gem install bundler --conservative'
+  system('bundle check') || system!('bundle install')
+end
+
 FileUtils.chdir DATA_DIR do
-  puts '== Downloading data =='
+  puts "\n== Downloading data =="
   system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/hightemp.txt -O'
   system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/jawiki-country.json.gz -O'
   system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/neko.txt -O'
