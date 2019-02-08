@@ -1,0 +1,21 @@
+os: osx
+
+language: ruby
+
+addons:
+  homebrew:
+    packages:
+      - cabocha
+      - gnuplot
+      - mecab
+
+before_install:
+  # Install Bundler 2.0
+  - gem update --system
+  - gem install bundler
+
+bundler_args: --without development
+
+cache: bundler
+
+before_script: bin/setup
