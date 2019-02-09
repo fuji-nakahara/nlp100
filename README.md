@@ -7,10 +7,11 @@
 - [MeCab](http://taku910.github.io/mecab/) 0.996 (with IPA dictionary)
 - [gnuplot](http://www.gnuplot.info/) 5.2.6
 - [CaboCha](https://taku910.github.io/cabocha/) 0.69
+- [Graphviz](http://www.graphviz.org/) 2.40.1
 
 macOS であれば Homebrew を使ってこれらをインストールできます:
 
-    $ brew install mecab mecab-ipadic gnuplot cabocha
+    $ brew install mecab mecab-ipadic gnuplot cabocha graphviz
 
 ## Usage
 
