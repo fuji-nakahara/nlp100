@@ -3,12 +3,6 @@
 
 require_relative '41'
 
-class Chunk
-  def any_morphs?(options)
-    manipulate_morphs(:any?, options)
-  end
-end
-
 res = NEKO_CHUNKS_LIST.each_with_object([]) do |chunks, arr|
   chunks.each do |chunk|
     next if !chunk.dst? || chunk.any_morphs?(pos: '名詞')

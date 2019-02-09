@@ -32,6 +32,10 @@ class Chunk
     manipulate_morphs(:find, morphs: morphs.reverse_each, **options)
   end
 
+  def any_morphs?(options)
+    manipulate_morphs(:any?, options)
+  end
+
   private
 
   def manipulate_morphs(symbol, morphs: self.morphs, **options)
