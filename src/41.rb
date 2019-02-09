@@ -15,12 +15,21 @@ class Chunk
     @morphs = morphs
   end
 
-  def original
-    morphs.map(&:surface).join
+  def original(symbol: false)
+    ms = symbol ? morphs : manipulate_morphs(:reject, pos: '記号')
+    ms.map(&:surface).join
   end
 
   def dst?
     dst.positive?
+  end
+
+  private
+
+  def manipulate_morphs(symbol, options)
+    morphs.send(symbol) do |morph|
+      options.all? { |key, val| morph[key] == val }
+    end
   end
 end
 

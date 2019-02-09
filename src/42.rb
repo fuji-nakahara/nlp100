@@ -3,17 +3,10 @@
 
 require_relative '41'
 
-class Chunk
-  def original_without_symbol
-    morphs.reject { |morph| morph.pos == '記号' }.map(&:surface).join
-  end
-end
-
 res = NEKO_CHUNKS_LIST.each_with_object([]) do |chunks, arr|
   chunks.each do |chunk|
-    str = chunk.original_without_symbol
-    next if !chunk.dst? || str.empty?
-    arr << "#{chunk.original_without_symbol}\t#{chunks[chunk.dst].original_without_symbol}"
+    next if !chunk.dst? || chunk.original.empty?
+    arr << "#{chunk.original}\t#{chunks[chunk.dst].original}"
   end
 end
 
