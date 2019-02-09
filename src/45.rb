@@ -21,16 +21,6 @@
 
 require_relative '41'
 
-class Chunk
-  def find_morph(options)
-    manipulate_morphs(:find, options)
-  end
-
-  def find_last_morph(options)
-    morphs.reverse_each.find { |m| options.all? { |k, v| m[k] == v } }
-  end
-end
-
 output_path = File.expand_path('../output/45.txt', __dir__)
 
 res = NEKO_CHUNKS_LIST.each_with_object([]) do |chunks, arr|

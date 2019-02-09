@@ -24,9 +24,17 @@ class Chunk
     dst.positive?
   end
 
+  def find_morph(options)
+    manipulate_morphs(:find, options)
+  end
+
+  def find_last_morph(options)
+    manipulate_morphs(:find, morphs: morphs.reverse_each, **options)
+  end
+
   private
 
-  def manipulate_morphs(symbol, options)
+  def manipulate_morphs(symbol, morphs: self.morphs, **options)
     morphs.send(symbol) do |morph|
       options.all? { |key, val| morph[key] == val }
     end
