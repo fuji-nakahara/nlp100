@@ -18,6 +18,10 @@ class Chunk
   def original
     morphs.map(&:surface).join
   end
+
+  def dst?
+    dst.positive?
+  end
 end
 
 file_path = File.expand_path('../data/neko.txt.cabocha', __dir__)
