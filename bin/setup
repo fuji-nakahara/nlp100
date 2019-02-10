@@ -28,4 +28,7 @@ FileUtils.chdir DATA_DIR do
   puts "\n== Analyzing neko.txt by CaboCha =="
   system! 'cabocha --version'
   system! 'cabocha -f1 neko.txt -o neko.txt.cabocha'
+
+  puts "\n== Analyzing nlp.txt by Stanford CoreNLP =="
+  system! 'corenlp.sh -annotators tokenize,ssplit,pos,lemma,ner,parse,dcoref -file nlp.txt'
 end
