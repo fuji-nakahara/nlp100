@@ -17,8 +17,7 @@ require_relative '41'
 
 res = NEKO_CHUNKS_LIST.each_with_object([]) do |chunks, arr|
   chunks.select { |chunk| chunk.any_morphs?(pos: '名詞') }.each do |chunk|
-    chained_chunks = [chunk]
-    chained_chunks << chunks[chained_chunks.last.dst] while chained_chunks.last.dst?
+    chained_chunks = chunk.chained_chunks(chunks)
     arr << chained_chunks.map(&:original).join(' -> ')
   end
 end

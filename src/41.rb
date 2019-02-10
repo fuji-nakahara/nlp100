@@ -16,7 +16,7 @@ class Chunk
   end
 
   def original(symbol: false)
-    ms = symbol ? morphs : manipulate_morphs(:reject, pos: '記号')
+    ms = symbol ? morphs : morphs_without_symbol
     ms.map(&:surface).join
   end
 
@@ -36,12 +36,22 @@ class Chunk
     manipulate_morphs(:any?, options)
   end
 
+  def chained_chunks(parent_chunks)
+    chunks = [self]
+    chunks << parent_chunks[chunks.last.dst] while chunks.last.dst?
+    chunks
+  end
+
   private
 
   def manipulate_morphs(symbol, morphs: self.morphs, **options)
     morphs.send(symbol) do |morph|
       options.all? { |key, val| morph[key] == val }
     end
+  end
+
+  def morphs_without_symbol
+    manipulate_morphs(:reject, pos: '記号')
   end
 end
 
