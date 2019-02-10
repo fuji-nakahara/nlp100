@@ -3,6 +3,7 @@ GEM
   specs:
     ast (2.4.0)
     concurrent-ruby (1.1.4)
+    fast-stemmer (1.0.2)
     gnuplotrb (0.4.0)
       hamster (~> 3.0)
     hamster (3.0.0)
@@ -30,6 +31,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  fast-stemmer (~> 1.0)
   gnuplotrb (~> 0.4.0)
   rake (~> 12.3)
   rubocop
