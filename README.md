@@ -8,10 +8,11 @@
 - [gnuplot](http://www.gnuplot.info/) 5.2.6
 - [CaboCha](https://taku910.github.io/cabocha/) 0.69
 - [Graphviz](http://www.graphviz.org/) 2.40.1
+- [Stanford Core NLP](https://stanfordnlp.github.io/CoreNLP/) 3.9.2
 
 macOS であれば Homebrew を使ってこれらをインストールできます:
 
-    $ brew install mecab mecab-ipadic gnuplot cabocha graphviz
+    $ brew install mecab mecab-ipadic gnuplot cabocha graphviz stanford-corenlp
 
 ## Usage
 
