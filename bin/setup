@@ -16,10 +16,10 @@ end
 
 FileUtils.chdir DATA_DIR do
   puts "\n== Downloading data =="
-  system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/hightemp.txt -O'
-  system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/jawiki-country.json.gz -O'
-  system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/neko.txt -O'
-  system! 'curl http://www.cl.ecei.tohoku.ac.jp/nlp100/data/nlp.txt -O'
+  system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/hightemp.txt'
+  system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/jawiki-country.json.gz'
+  system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/neko.txt'
+  system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/nlp.txt'
 
   puts "\n== Analyzing neko.txt by MeCab =="
   system! 'mecab --version'
