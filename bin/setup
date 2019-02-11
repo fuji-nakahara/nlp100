@@ -20,6 +20,7 @@ FileUtils.chdir DATA_DIR do
   system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/jawiki-country.json.gz'
   system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/neko.txt'
   system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/nlp.txt'
+  system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/artist.json.gz'
 
   puts "\n== Analyzing neko.txt by MeCab =="
   system! 'mecab --version'
