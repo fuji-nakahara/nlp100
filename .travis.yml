@@ -9,6 +9,7 @@ addons:
       - gnuplot
       - graphviz
       - mecab
+      - redis
 
 before_install:
   # Install Bundler 2.0
@@ -23,7 +24,9 @@ bundler_args: --without development
 
 cache: bundler
 
-before_script: bin/setup
+before_script:
+  - brew services start redis
+  - bin/setup
 
 deploy:
   - provider: pages
