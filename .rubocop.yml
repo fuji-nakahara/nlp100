@@ -11,6 +11,9 @@ Layout/MultilineMethodCallIndentation:
 Layout/SpaceAroundOperators:
   Enabled: false
 
+Metrics/AbcSize:
+  Max: 25
+
 Metrics/LineLength:
   Max: 160
 
