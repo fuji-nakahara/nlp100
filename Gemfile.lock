@@ -9,12 +9,16 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.2)
+    link_header (0.0.8)
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
     powerpack (0.1.2)
     rainbow (3.0.0)
     rake (12.3.2)
+    rdf (3.0.9)
+      hamster (~> 3.0)
+      link_header (~> 0.0, >= 0.0.8)
     rubocop (0.63.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -25,6 +29,8 @@ GEM
       unicode-display_width (~> 1.4.0)
     ruby-graphviz (1.2.4)
     ruby-progressbar (1.10.0)
+    sxp (1.0.1)
+      rdf (>= 2.2, < 4.0)
     unicode-display_width (1.4.1)
 
 PLATFORMS
@@ -36,6 +42,7 @@ DEPENDENCIES
   rake (~> 12.3)
   rubocop
   ruby-graphviz (~> 1.2)
+  sxp (~> 1.0)
 
 BUNDLED WITH
    2.0.1
