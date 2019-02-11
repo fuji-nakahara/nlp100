@@ -20,7 +20,7 @@ GEM
       hamster (~> 3.0)
       link_header (~> 0.0, >= 0.0.8)
     redis (4.1.0)
-    rubocop (0.63.1)
+    rubocop (0.64.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
