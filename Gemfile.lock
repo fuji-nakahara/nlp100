@@ -19,6 +19,7 @@ GEM
     rdf (3.0.9)
       hamster (~> 3.0)
       link_header (~> 0.0, >= 0.0.8)
+    redis (4.1.0)
     rubocop (0.63.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -40,6 +41,7 @@ DEPENDENCIES
   fast-stemmer (~> 1.0)
   gnuplotrb (~> 0.4.0)
   rake (~> 12.3)
+  redis (~> 4.1)
   rubocop
   ruby-graphviz (~> 1.2)
   sxp (~> 1.0)
