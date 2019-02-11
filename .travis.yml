@@ -24,3 +24,13 @@ bundler_args: --without development
 cache: bundler
 
 before_script: bin/setup
+
+deploy:
+  - provider: pages
+    github-token:
+      secure: "jfdsR2Bhai3LHqTFurZAjD0XdTLHqpwxaE6TTUdBhwV8PBBhNXZ/vG+bsdos4/kfn4zSzQRCuWdYfiaX1b6MaqEskOdBZRNohHF8vAUVaiwXjQtNmJoKH4I5AtHQX3NADfOgCDZODxps/QVS2EkzY94WriaMAOdZMCPnvWmpikmsrqiQuy3Iyq6OvnyoH7OEroJY+Au2yC1UFXjpuVC0zMzy3HclkhDyWOzyaVYHeMRm3TNd8DkPz/Tj36uBvP/dQ9IsgIcL4fL3aEi4bYO9DYfDDbgyXEQ2W6rpgU+xTi3dA1KeXpxRmwILd3rUnVwJNiI643j0X/zjd0jTLYIH0Tq19w+tBU2fb5K4NAyRU/4e6shLMZqqdCA1QFRfZa0exbsKvMz1vPq/Gbsfzo85InNILjiYTElQqc7jCmquyDV30WjWxujyf9XIDZ+k+PzBsflQCzrSKOEvlAs5rbYMQ1xLm8xQ03Betmpc/3sf86tk75yBSL/pdh+tA1vHcoWhwXu3QJfgj3/RXecgd3Z+xu20cyTPDoP4Z879Des0ZI70cLkn4TISX8QyLr3EHgnv/lGfPHFFf156w92uI86KwgERTmkVfJJ1z97ns/fWpMcD0Gy/jCIwJsW/EAZRXUEO3sFZJilgImKDaLqX1CRjtVZk8W9CKArsd5nJGQurwLI="
+    skip-cleanup: true
+    local-dir: output
+    target_branch: gh-pages
+    on:
+      branch: master
