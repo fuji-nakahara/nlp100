@@ -18,10 +18,11 @@
 - [CaboCha](https://taku910.github.io/cabocha/) 0.69
 - [Graphviz](http://www.graphviz.org/) 2.40.1
 - [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/) 3.9.2
+- [Redis](https://redis.io/) 5.0.3
 
 macOS であれば Homebrew を使ってこれらをインストールできます:
 
-    $ brew install ruby mecab mecab-ipadic gnuplot cabocha graphviz stanford-corenlp
+    $ brew install ruby mecab mecab-ipadic gnuplot cabocha graphviz stanford-corenlp redis
 
 インストールができれば、スクリプト `bin/setup` を実行してください:
 
