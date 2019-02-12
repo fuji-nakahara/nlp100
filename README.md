@@ -19,16 +19,20 @@
 - [Graphviz](http://www.graphviz.org/) 2.40.1
 - [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/) 3.9.2
 - [Redis](https://redis.io/) 5.0.3
+- [MongoDB](https://www.mongodb.com/) 4.0.3
 
 macOS であれば Homebrew を使ってこれらをインストールできます:
 
-    $ brew install ruby mecab mecab-ipadic gnuplot cabocha graphviz stanford-corenlp redis
+    $ brew install ruby mecab mecab-ipadic gnuplot cabocha graphviz stanford-corenlp redis mongodb
 
-インストールができれば、スクリプト `bin/setup` を実行してください:
+インストールができれば、スクリプト `bin/setup` を実行してください。
+このスクリプトは、課題を解くのに必要なデータのダウンロードと前処理、必要な gem のインストールを行います:
 
     $ cd nlp100 && bin/setup
 
-このスクリプトは、課題を解くのに必要なデータのダウンロードと前処理、必要な gem のインストールを行います。
+また、「第7章: データベース」の回答を実行する場合は、その前に Redis と MongoDB を起動してください:
+
+    $ brew services redis && brew services mongodb
 
 以上で、回答の Ruby プログラムを実行するのに必要な環境が整いました。
 
