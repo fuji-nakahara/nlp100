@@ -9,6 +9,7 @@ addons:
       - gnuplot
       - graphviz
       - mecab
+      - mongodb
       - redis
 
 before_install:
@@ -26,6 +27,7 @@ cache: bundler
 
 before_script:
   - brew services start redis
+  - brew services start mongodb
   - bin/setup
 
 deploy:
