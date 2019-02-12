@@ -19,7 +19,7 @@ GEM
     powerpack (0.1.2)
     rainbow (3.0.0)
     rake (12.3.2)
-    rdf (3.0.9)
+    rdf (3.0.10)
       hamster (~> 3.0)
       link_header (~> 0.0, >= 0.0.8)
     redis (4.1.0)
