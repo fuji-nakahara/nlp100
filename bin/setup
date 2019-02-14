@@ -21,6 +21,10 @@ FileUtils.chdir DATA_DIR do
   system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/neko.txt'
   system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/nlp.txt'
   system! 'wget http://www.cl.ecei.tohoku.ac.jp/nlp100/data/artist.json.gz'
+  system! 'wget http://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz'
+
+  puts "\n== Extracting rt-polaritydata.tar.gz"
+  system! 'tar -xvf rt-polaritydata.tar.gz'
 
   puts "\n== Analyzing neko.txt by MeCab =="
   system! 'mecab --version'
