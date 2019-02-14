@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'fast-stemmer', '~> 1.0'
 gem 'gnuplotrb', '~> 0.4.0'
+gem 'minitest', '~> 5.11'
 gem 'mongo', '~> 2.7'
 gem 'rake', '~> 12.3'
 gem 'redis', '~> 4.1'

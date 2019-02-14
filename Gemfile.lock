@@ -11,6 +11,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.2)
     link_header (0.0.8)
+    minitest (5.11.3)
     mongo (2.7.0)
       bson (>= 4.4.2, < 5.0.0)
     parallel (1.13.0)
@@ -43,6 +44,7 @@ PLATFORMS
 DEPENDENCIES
   fast-stemmer (~> 1.0)
   gnuplotrb (~> 0.4.0)
+  minitest (~> 5.11)
   mongo (~> 2.7)
   rake (~> 12.3)
   redis (~> 4.1)
